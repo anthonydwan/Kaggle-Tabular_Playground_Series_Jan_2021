@@ -12,9 +12,9 @@ Feature Scaling - MinMax/StandardScaler --> Popular regression models (trial and
 5. CatBoost Regression
 6. Lightgbm Regression
 7. XGB Regression
-8. Averaging all 7 moels of the above. But models with lesser performance dragged down the predictive power of the other models. RMSE at 0.701 (Public)
+8. Averaging all 7 moels of the above. But models with lesser performance dragged down the predictive power of the other models. 
 
-The highest performing model cb regression was used for submission 1. 
+The highest performing model cb regression was used for submission 1 (RMSE at 0.701 (Public)). 
 
 Attempt 2 (Submission 2):
 
