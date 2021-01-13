@@ -1,5 +1,5 @@
 # Kaggle-Tabular_Playground_Series_Jan_2021
-predicting a continuous target based on number of features columns given in the data. 
+Predicting a continuous target based on number of features columns given in the data. Below is a documentation of the changes and techniques tried/implemented for reference.
 
 
 ### <b>Attempt 1 (Submission 1): </b>
