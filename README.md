@@ -28,6 +28,8 @@ Attempt 3:
 
 After adding 2nd order feature, used Gaussian Rank Transformation on all features (since features with normal distrbution helps non-tree models). Then, using kerastuner (Hyperband) to tune a NN with 2 to 20 layers (relu Dense layers and dropout regularisation). The model did not perform well at ~0.707
 
+*Note - Adversial Validation was performed, train data is good representation of test data (AUC 0.5)*
+
 Attempt 4:
 
 Back to CB/LGBT/XGB, kept 2nd order terms, using optuna to tune all three models. 
