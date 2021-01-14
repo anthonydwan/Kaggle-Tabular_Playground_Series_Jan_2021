@@ -30,6 +30,17 @@ After adding 2nd order feature, used Gaussian Rank Transformation on all feature
 
 *Note - Adversial Validation was performed and confirmed that train data is good representation of test data (AUC 0.5)*
 
-### <b>Attempt 4:</b>
+### <b>Attempt 4 (Submissions 3 and 4):</b>
 
-Back to CB/LGBT/XGB, kept 2nd order terms, using optuna to tune all three models. 
+Back to CB/LGBM/XGB, kept 2nd order terms, using optuna to tune all three models. 
+Results: 
+* Optuna XGB never converged lower than 0.702 validation RMSE - was not submitted. 
+* Optuna LGBM converged to 0.6987 validation RMSE 
+* Optuna CB converged to 0.6985 validation RMSE (there was a small bug which led to suboptimal hyperparameter tuning)
+I used average of CB and LGBM for submission 3 and just CB for submission 4. Both did not do better than my initial score. Seems that 2nd order term was not helpful in lifting the score. 
+
+### <b>Attempt 5:</b>
+No feature Engineering for 2nd order term, simple optuna tuning on LGBM and CB. 
+
+
+
