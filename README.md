@@ -1,5 +1,5 @@
 # Kaggle-Tabular_Playground_Series_Jan_2021
-Predicting a continuous target based on number of features columns given in the data. Below is a documentation of the changes and techniques tried/implemented for reference.
+Predicting a continuous target (regression) based on number of anonymised features columns given in the data. Below is a documentation of the changes and techniques tried/implemented for reference.
 
 
 ### <b>Attempt 1 (Submission 1): </b>
@@ -41,6 +41,30 @@ I used average of CB and LGBM for submission 3 and just CB for submission 4. Bot
 
 ### <b>Attempt 5:</b>
 No feature Engineering for 2nd order term, simple optuna tuning on LGBM and CB. 
+* Submission 5 - LGBM regressor with optuna hyperparameter tuning 
+* Submission 6 - CatBoost regressor with optuna hyperparameter tuning 
+* Submission 7 - XGB regressor with optuna hyperparameter tuning 
+
+None of the results were close to satisfactory. 
+
+### <b>Attempt 6:</b> 
+I realised my mistake in hyperparameter tuning was over reliance on one held-out validation set as the metric for tuning performance. This led to overfit on that particular set. This should have been obvious since the hyperparameter tuning tool provided by sklearn uses cross-validation on entire training set. 
+
+Thus, I switched the objective metric of optuna tuner to cross_val_score (6-fold CV which I believe to be optimal for 6-core CPU parallel processing) the to ensure that we evaluate a more generalised performance. Given the unsatisfactory training speed after implementing this change, I have tinkered with the pruners in the optuna library. In the hopes of speeding up hyperparameter tuning, I switched to hyperband pruner. 
+
+* Submission 8 & 9 - Optuna + cross_val_score + hyperband pruner LGBM regressor (LB RMSE 0.70182) which is starting to be close to my previous best score
+* Submission 10 - Optuna + cross_val_score for average of both LGBM regressor and xgboost regressor
+
+
+### <b>Attempt 7:</b> 
+* Submission 11 - smaller learning rate 
+Upon reading the discussion shown by shogosuzuki in https://www.kaggle.com/c/tabular-playground-series-jan-2021/discussion/212520, I noticed that the models converge with a significantly better RMSE when a very small learning rate is used. 
+
+I borrowed this approach for optimised LGBM (LB 0.69760)
+
+
+
+
 
 
 
