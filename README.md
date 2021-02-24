@@ -60,7 +60,7 @@ Thus, I switched the objective metric of optuna tuner to cross_val_score (6-fold
 
 ### <b>Attempt 7:</b> 
 * Submission 11 - smaller learning rate 
-Upon reading the discussion shown by shogosuzuki in https://www.kaggle.com/c/tabular-playground-series-jan-2021/discussion/212520, I noticed that the models converge with a significantly better RMSE when a very small learning rate is used. 
+Upon reading the [discussion](https://www.kaggle.com/c/tabular-playground-series-jan-2021/discussion/212520) shown by shogosuzuki, I noticed that the models converge with a significantly better RMSE when a very small learning rate is used. 
 
 I borrowed this approach for optimised LGBM (LB 0.69760)
 
