@@ -1,7 +1,7 @@
 # Kaggle-Tabular_Playground_Series_Jan_2021
 Predicting a continuous target (regression) based on number of anonymised features columns given in the data. Below is a documentation of the changes and techniques tried/implemented for reference.
 
-You may view the notebook in https://nbviewer.jupyter.org/github/anthonydwan/Kaggle-Tabular_Playground_Series_Jan_2021/blob/main/Tabular_Playground_Jan21_%28LGBM_CB_Approach_3_and_4%29.ipynb (since github only renders static notebooks)
+**NB:** You may view the notebook in [here](https://nbviewer.jupyter.org/github/anthonydwan/Kaggle-Tabular_Playground_Series_Jan_2021/blob/main/Tabular_Playground_Jan21_%28LGBM_CB_Approach_3_and_4%29.ipynb) (since github only renders static notebooks).
 
 
 ### <b>Attempt 1 (Submission 1): </b>
